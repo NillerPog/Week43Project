@@ -15,21 +15,6 @@ public class HandlingReadingCards {
         boolean repeat = true;
 
 
-        String[] intArray = new String[12];
-
-        //Serial number input
-        intArray[0] = "Serial 1";
-        intArray[4] = "Serial 2";
-        intArray[8] = "Serial 3";
-
-        for (int i = 1; i <= 12; i = i + 4) {
-            System.out.println("Insert reading number");
-            String readingNo = in.next();
-            intArray[i] = readingNo;
-        }
-        System.out.println(intArray[4]+" "+intArray[5]);
-        return 0;
-        /*
         do {
             System.out.println("Water consumption amount");
             double waterDrainage = in.nextDouble();
@@ -55,7 +40,6 @@ public class HandlingReadingCards {
         globalCount = countReadingCard;
         return 0;
 
-         */
     }
 
 
@@ -92,5 +76,12 @@ public class HandlingReadingCards {
                 requestReadingCard(); //Send reading cards to amount of people in db
             }
         }
+    }
+
+
+    public static void missingReading(){
+
+
+
     }
 }
