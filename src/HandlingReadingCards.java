@@ -5,24 +5,41 @@ public class HandlingReadingCards {
     public static int globalCount;
     public static void main(String[] args) {
 
-        HandlingReadingCardsSubMenu();
+        handlingReadingCardsSubMenu();
 
     }
+
 
     public static int readingCard(int countReadingCard) {
         Scanner in = new Scanner(System.in);
         boolean repeat = true;
 
+
+        String[] intArray = new String[12];
+
+        //Serial number input
+        intArray[0] = "Serial 1";
+        intArray[4] = "Serial 2";
+        intArray[8] = "Serial 3";
+
+        for (int i = 1; i <= 12; i = i + 4) {
+            System.out.println("Insert reading number");
+            String readingNo = in.next();
+            intArray[i] = readingNo;
+        }
+        System.out.println(intArray[4]+" "+intArray[5]);
+        return 0;
+        /*
         do {
             System.out.println("Water consumption amount");
             double waterDrainage = in.nextDouble();
             System.out.println("Water used");
             double waterUsed = in.nextDouble();
-            System.out.println("Meter number");
-            String meterSerial = in.next();
+            //System.out.println("Meter number");
+            //String meterSerial = in.next();
 
 
-            System.out.println(waterDrainage + waterUsed + meterSerial); //Goes to database
+            System.out.println(waterDrainage + " " + waterUsed + " "); //Goes to database
 
 
             System.out.println("Add additional data press 1,  any key to exit.");
@@ -37,6 +54,8 @@ public class HandlingReadingCards {
         System.out.println("Done");
         globalCount = countReadingCard;
         return 0;
+
+         */
     }
 
 
@@ -55,7 +74,7 @@ public class HandlingReadingCards {
     }
 
 
-    public static void HandlingReadingCardsSubMenu(){
+    public static void handlingReadingCardsSubMenu(){
 
         //Test submenu
         Scanner in = new Scanner(System.in);
@@ -73,6 +92,5 @@ public class HandlingReadingCards {
                 requestReadingCard(); //Send reading cards to amount of people in db
             }
         }
-
     }
 }
